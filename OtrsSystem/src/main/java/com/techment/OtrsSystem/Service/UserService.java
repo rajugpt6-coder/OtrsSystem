@@ -84,11 +84,11 @@ public class UserService {
      * @return Optional of user, empty if the user already exists.
      */
     public Optional<User> signup(String username, String password, String firstName, String lastName, String middleName, String phoneNo) {
-        LOGGER.info("New user attempting to sign in");
+        LOGGER.info("New user attempting to sign up");
         Optional<User> user = Optional.empty();
 
         if (!userRepository.findByEmail(username).isPresent()) {
-            Optional<Role> role = roleRepository.findByRoleName("admin");
+            Optional<Role> role = roleRepository.findByRoleName("ROLE_ADMIN");
             user = Optional.of(userRepository.save(new User(username,
                     passwordEncoder.encode(password),
                     firstName,
@@ -103,5 +103,9 @@ public class UserService {
 
     public List<User> getAll() {
         return userRepository.findAll();
+    }
+
+    public Boolean isExist(long id){
+        return userRepository.existsById(id);
     }
 }
