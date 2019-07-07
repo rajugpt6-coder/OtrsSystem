@@ -28,7 +28,6 @@ public class UserController {
     }
 
     @PostMapping("/signup")
-//    @PreAuthorize("hasRole('admin')")
     @ResponseStatus(HttpStatus.CREATED)
     public User signup(@RequestBody @Valid LoginDto loginDto){
         return userService.signup(loginDto.getUsername(), loginDto.getPassword(), loginDto.getFirstName(),
@@ -36,7 +35,7 @@ public class UserController {
     }
 
     @GetMapping
-//    @PreAuthorize("hasRole('admin')")
+    @PreAuthorize("hasRole('ROLE_ADMIN') or hasRole('ROLE_CSR')")
     public List<User> getAllUsers() {
         return userService.getAll();
     }

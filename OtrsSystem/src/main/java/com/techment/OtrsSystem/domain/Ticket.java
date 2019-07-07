@@ -39,6 +39,8 @@ public class Ticket {
 
     protected Ticket() {}
 
+
+
     public Ticket(String category, String title, String issueDescription, Timestamp createdDate, Timestamp dueDate, String status, User user) {
         this.category = category;
         this.title = title;
@@ -112,4 +114,6 @@ public class Ticket {
     public void setDueDate(Timestamp dueDate) {
         this.dueDate = dueDate;
     }
+
+
 }
