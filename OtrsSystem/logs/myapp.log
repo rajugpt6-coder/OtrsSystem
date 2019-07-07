@@ -1,0 +1,466 @@
+2019-07-07 05:58:37.749  INFO 9240 --- [main] c.t.OtrsSystem.OtrsSystemApplication     : Starting OtrsSystemApplication on DESKTOP-6LL63N7 with PID 9240 (D:\Techment\OtrsSystem\target\classes started by Raju in D:\Techment\OtrsSystem)
+2019-07-07 05:58:37.765 DEBUG 9240 --- [main] c.t.OtrsSystem.OtrsSystemApplication     : Running with Spring Boot v2.1.6.RELEASE, Spring v5.1.8.RELEASE
+2019-07-07 05:58:37.765  INFO 9240 --- [main] c.t.OtrsSystem.OtrsSystemApplication     : The following profiles are active: default
+2019-07-07 05:58:39.050  INFO 9240 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-07-07 05:58:39.161  INFO 9240 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 101ms. Found 4 repository interfaces.
+2019-07-07 05:58:39.654  INFO 9240 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$d45a67f] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-07-07 05:58:39.696  INFO 9240 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.security.config.annotation.configuration.ObjectPostProcessorConfiguration' of type [org.springframework.security.config.annotation.configuration.ObjectPostProcessorConfiguration$$EnhancerBySpringCGLIB$$a5f36eb9] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-07-07 05:58:39.704  INFO 9240 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'objectPostProcessor' of type [org.springframework.security.config.annotation.configuration.AutowireBeanFactoryObjectPostProcessor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-07-07 05:58:39.706  INFO 9240 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler@35835e65' of type [org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-07-07 05:58:39.706  INFO 9240 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.security.config.annotation.method.configuration.GlobalMethodSecurityConfiguration' of type [org.springframework.security.config.annotation.method.configuration.GlobalMethodSecurityConfiguration$$EnhancerBySpringCGLIB$$cac8116b] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-07-07 05:58:39.714  INFO 9240 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'methodSecurityMetadataSource' of type [org.springframework.security.access.method.DelegatingMethodSecurityMetadataSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-07-07 05:58:39.716  INFO 9240 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.hateoas.config.HateoasConfiguration' of type [org.springframework.hateoas.config.HateoasConfiguration$$EnhancerBySpringCGLIB$$8cc5f3b1] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-07-07 05:58:40.352  INFO 9240 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2019-07-07 05:58:40.383  INFO 9240 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-07-07 05:58:40.383  INFO 9240 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.21]
+2019-07-07 05:58:40.583  INFO 9240 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2019-07-07 05:58:40.583  INFO 9240 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 2693 ms
+2019-07-07 05:58:40.906  INFO 9240 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2019-07-07 05:58:41.089  INFO 9240 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2019-07-07 05:58:41.188  INFO 9240 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2019-07-07 05:58:41.340  INFO 9240 --- [main] org.hibernate.Version                    : HHH000412: Hibernate Core {5.3.10.Final}
+2019-07-07 05:58:41.342  INFO 9240 --- [main] org.hibernate.cfg.Environment            : HHH000206: hibernate.properties not found
+2019-07-07 05:58:41.645  INFO 9240 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.0.4.Final}
+2019-07-07 05:58:41.847  INFO 9240 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2019-07-07 05:58:42.989  INFO 9240 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2019-07-07 05:58:44.452  INFO 9240 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2019-07-07 05:58:44.533  WARN 9240 --- [main] aWebConfiguration$JpaWebMvcConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2019-07-07 05:58:45.131  INFO 9240 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@3df3410a, org.springframework.security.web.context.SecurityContextPersistenceFilter@7f1ad846, org.springframework.security.web.header.HeaderWriterFilter@26712838, org.springframework.security.web.authentication.logout.LogoutFilter@1191029d, com.techment.OtrsSystem.Security.JwtTokenFilter@670c171c, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@2bc2e022, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@3c6fb501, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@61d42275, org.springframework.security.web.session.SessionManagementFilter@47fca3cc, org.springframework.security.web.access.ExceptionTranslationFilter@17ec5e2a, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@6a878778]
+2019-07-07 05:58:45.262  INFO 9240 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2019-07-07 05:58:45.270  INFO 9240 --- [main] c.t.OtrsSystem.OtrsSystemApplication     : Started OtrsSystemApplication in 8.052 seconds (JVM running for 9.007)
+2019-07-07 05:59:27.438  INFO 9240 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-07-07 05:59:27.438  INFO 9240 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2019-07-07 05:59:27.470  INFO 9240 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 32 ms
+2019-07-07 05:59:27.474  INFO 9240 --- [http-nio-8080-exec-1] c.t.OtrsSystem.Security.JwtTokenFilter   : Process request to check for a JSON Web Token 
+2019-07-07 05:59:27.601  INFO 9240 --- [http-nio-8080-exec-1] c.t.OtrsSystem.Service.UserService       : New user attempting to sign in
+2019-07-07 05:59:27.654  INFO 9240 --- [http-nio-8080-exec-1] o.h.h.i.QueryTranslatorFactoryInitiator  : HHH000397: Using ASTQueryTranslatorFactory
+2019-07-07 05:59:28.296  WARN 9240 --- [http-nio-8080-exec-1] o.s.s.c.bcrypt.BCryptPasswordEncoder     : Encoded password does not look like BCrypt
+2019-07-07 05:59:28.300  INFO 9240 --- [http-nio-8080-exec-1] c.t.OtrsSystem.Service.UserService       : Log in failed for user rajugpt6@gmail.com
+2019-07-07 05:59:28.308  INFO 9240 --- [http-nio-8080-exec-1] c.t.OtrsSystem.Security.JwtTokenFilter   : Process request to check for a JSON Web Token 
+2019-07-07 06:01:49.710  INFO 9240 --- [http-nio-8080-exec-5] c.t.OtrsSystem.Security.JwtTokenFilter   : Process request to check for a JSON Web Token 
+2019-07-07 06:01:49.712  INFO 9240 --- [http-nio-8080-exec-5] c.t.OtrsSystem.Service.UserService       : New user attempting to sign in
+2019-07-07 06:01:49.725  WARN 9240 --- [http-nio-8080-exec-5] o.s.s.c.bcrypt.BCryptPasswordEncoder     : Encoded password does not look like BCrypt
+2019-07-07 06:01:49.726  INFO 9240 --- [http-nio-8080-exec-5] c.t.OtrsSystem.Service.UserService       : Log in failed for user rajugpt6@gmail.com
+2019-07-07 06:01:49.727  INFO 9240 --- [http-nio-8080-exec-5] c.t.OtrsSystem.Security.JwtTokenFilter   : Process request to check for a JSON Web Token 
+2019-07-07 06:06:21.075  INFO 6112 --- [main] c.t.OtrsSystem.OtrsSystemApplication     : Starting OtrsSystemApplication on DESKTOP-6LL63N7 with PID 6112 (D:\Techment\OtrsSystem\target\classes started by Raju in D:\Techment\OtrsSystem)
+2019-07-07 06:06:21.090 DEBUG 6112 --- [main] c.t.OtrsSystem.OtrsSystemApplication     : Running with Spring Boot v2.1.6.RELEASE, Spring v5.1.8.RELEASE
+2019-07-07 06:06:21.090  INFO 6112 --- [main] c.t.OtrsSystem.OtrsSystemApplication     : The following profiles are active: default
+2019-07-07 06:06:22.194  INFO 6112 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-07-07 06:06:22.276  INFO 6112 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 74ms. Found 4 repository interfaces.
+2019-07-07 06:06:22.761  INFO 6112 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$82b7a44b] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-07-07 06:06:22.792  INFO 6112 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.security.config.annotation.configuration.ObjectPostProcessorConfiguration' of type [org.springframework.security.config.annotation.configuration.ObjectPostProcessorConfiguration$$EnhancerBySpringCGLIB$$1b656c85] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-07-07 06:06:22.807  INFO 6112 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'objectPostProcessor' of type [org.springframework.security.config.annotation.configuration.AutowireBeanFactoryObjectPostProcessor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-07-07 06:06:22.807  INFO 6112 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler@191a709b' of type [org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-07-07 06:06:22.807  INFO 6112 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.security.config.annotation.method.configuration.GlobalMethodSecurityConfiguration' of type [org.springframework.security.config.annotation.method.configuration.GlobalMethodSecurityConfiguration$$EnhancerBySpringCGLIB$$403a0f37] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-07-07 06:06:22.807  INFO 6112 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'methodSecurityMetadataSource' of type [org.springframework.security.access.method.DelegatingMethodSecurityMetadataSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-07-07 06:06:22.824  INFO 6112 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.hateoas.config.HateoasConfiguration' of type [org.springframework.hateoas.config.HateoasConfiguration$$EnhancerBySpringCGLIB$$237f17d] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-07-07 06:06:23.475  INFO 6112 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2019-07-07 06:06:23.505  INFO 6112 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-07-07 06:06:23.506  INFO 6112 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.21]
+2019-07-07 06:06:23.700  INFO 6112 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2019-07-07 06:06:23.701  INFO 6112 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 2548 ms
+2019-07-07 06:06:24.004  INFO 6112 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2019-07-07 06:06:24.200  INFO 6112 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2019-07-07 06:06:24.260  INFO 6112 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2019-07-07 06:06:24.418  INFO 6112 --- [main] org.hibernate.Version                    : HHH000412: Hibernate Core {5.3.10.Final}
+2019-07-07 06:06:24.420  INFO 6112 --- [main] org.hibernate.cfg.Environment            : HHH000206: hibernate.properties not found
+2019-07-07 06:06:24.678  INFO 6112 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.0.4.Final}
+2019-07-07 06:06:24.869  INFO 6112 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2019-07-07 06:06:26.032  INFO 6112 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2019-07-07 06:06:27.326  INFO 6112 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2019-07-07 06:06:27.400  WARN 6112 --- [main] aWebConfiguration$JpaWebMvcConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2019-07-07 06:06:27.904  INFO 6112 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@66a8751a, org.springframework.security.web.context.SecurityContextPersistenceFilter@26712838, org.springframework.security.web.header.HeaderWriterFilter@14ad42, org.springframework.security.web.authentication.logout.LogoutFilter@2e6b379c, com.techment.OtrsSystem.Security.JwtTokenFilter@4ec27c4c, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@268f0ff3, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@55746340, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@12200670, org.springframework.security.web.session.SessionManagementFilter@6c2dd88b, org.springframework.security.web.access.ExceptionTranslationFilter@b144175, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@c83ed77]
+2019-07-07 06:06:28.045  INFO 6112 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2019-07-07 06:06:28.048  INFO 6112 --- [main] c.t.OtrsSystem.OtrsSystemApplication     : Started OtrsSystemApplication in 7.441 seconds (JVM running for 8.099)
+2019-07-07 06:07:27.030  INFO 6112 --- [http-nio-8080-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-07-07 06:07:27.030  INFO 6112 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2019-07-07 06:07:27.052  INFO 6112 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 22 ms
+2019-07-07 06:07:27.068  INFO 6112 --- [http-nio-8080-exec-2] c.t.OtrsSystem.Security.JwtTokenFilter   : Process request to check for a JSON Web Token 
+2019-07-07 06:07:27.200  INFO 6112 --- [http-nio-8080-exec-2] c.t.OtrsSystem.Service.UserService       : New user attempting to sign in
+2019-07-07 06:07:27.247  INFO 6112 --- [http-nio-8080-exec-2] o.h.h.i.QueryTranslatorFactoryInitiator  : HHH000397: Using ASTQueryTranslatorFactory
+2019-07-07 06:07:27.820  WARN 6112 --- [http-nio-8080-exec-2] o.s.s.c.bcrypt.BCryptPasswordEncoder     : Encoded password does not look like BCrypt
+2019-07-07 06:07:27.835  INFO 6112 --- [http-nio-8080-exec-2] c.t.OtrsSystem.Security.JwtTokenFilter   : Process request to check for a JSON Web Token 
+2019-07-07 06:15:28.487  INFO 17588 --- [main] c.t.OtrsSystem.OtrsSystemApplication     : Starting OtrsSystemApplication on DESKTOP-6LL63N7 with PID 17588 (D:\Techment\OtrsSystem\target\classes started by Raju in D:\Techment\OtrsSystem)
+2019-07-07 06:15:28.487 DEBUG 17588 --- [main] c.t.OtrsSystem.OtrsSystemApplication     : Running with Spring Boot v2.1.6.RELEASE, Spring v5.1.8.RELEASE
+2019-07-07 06:15:28.487  INFO 17588 --- [main] c.t.OtrsSystem.OtrsSystemApplication     : The following profiles are active: default
+2019-07-07 06:15:29.500  INFO 17588 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-07-07 06:15:29.579  INFO 17588 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 71ms. Found 4 repository interfaces.
+2019-07-07 06:15:30.101  INFO 17588 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$8e07db42] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-07-07 06:15:30.139  INFO 17588 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.security.config.annotation.configuration.ObjectPostProcessorConfiguration' of type [org.springframework.security.config.annotation.configuration.ObjectPostProcessorConfiguration$$EnhancerBySpringCGLIB$$26b5a37c] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-07-07 06:15:30.144  INFO 17588 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'objectPostProcessor' of type [org.springframework.security.config.annotation.configuration.AutowireBeanFactoryObjectPostProcessor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-07-07 06:15:30.145  INFO 17588 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler@6e0cff20' of type [org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-07-07 06:15:30.148  INFO 17588 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.security.config.annotation.method.configuration.GlobalMethodSecurityConfiguration' of type [org.springframework.security.config.annotation.method.configuration.GlobalMethodSecurityConfiguration$$EnhancerBySpringCGLIB$$4b8a462e] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-07-07 06:15:30.152  INFO 17588 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'methodSecurityMetadataSource' of type [org.springframework.security.access.method.DelegatingMethodSecurityMetadataSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-07-07 06:15:30.157  INFO 17588 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.hateoas.config.HateoasConfiguration' of type [org.springframework.hateoas.config.HateoasConfiguration$$EnhancerBySpringCGLIB$$d882874] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-07-07 06:15:30.721  INFO 17588 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2019-07-07 06:15:30.752  INFO 17588 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-07-07 06:15:30.752  INFO 17588 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.21]
+2019-07-07 06:15:30.939  INFO 17588 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2019-07-07 06:15:30.939  INFO 17588 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 2390 ms
+2019-07-07 06:15:31.241  INFO 17588 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2019-07-07 06:15:31.393  INFO 17588 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2019-07-07 06:15:31.457  INFO 17588 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2019-07-07 06:15:31.531  INFO 17588 --- [main] org.hibernate.Version                    : HHH000412: Hibernate Core {5.3.10.Final}
+2019-07-07 06:15:31.533  INFO 17588 --- [main] org.hibernate.cfg.Environment            : HHH000206: hibernate.properties not found
+2019-07-07 06:15:31.679  INFO 17588 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.0.4.Final}
+2019-07-07 06:15:31.848  INFO 17588 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2019-07-07 06:15:32.736  INFO 17588 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2019-07-07 06:15:34.110  INFO 17588 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2019-07-07 06:15:34.183  WARN 17588 --- [main] aWebConfiguration$JpaWebMvcConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2019-07-07 06:15:34.705  INFO 17588 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@10408ea, org.springframework.security.web.context.SecurityContextPersistenceFilter@7981963f, org.springframework.security.web.header.HeaderWriterFilter@73a5d86c, org.springframework.security.web.authentication.logout.LogoutFilter@1e23ee0e, com.techment.OtrsSystem.Security.JwtTokenFilter@3d7b3b18, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@b4d83ac, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@7109b603, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@186dcb05, org.springframework.security.web.session.SessionManagementFilter@4e26987b, org.springframework.security.web.access.ExceptionTranslationFilter@1280bae3, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@7f1ad846]
+2019-07-07 06:15:34.843  INFO 17588 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2019-07-07 06:15:34.845  INFO 17588 --- [main] c.t.OtrsSystem.OtrsSystemApplication     : Started OtrsSystemApplication in 6.749 seconds (JVM running for 7.37)
+2019-07-07 06:15:54.415  INFO 17588 --- [http-nio-8080-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-07-07 06:15:54.415  INFO 17588 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2019-07-07 06:15:54.433  INFO 17588 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 18 ms
+2019-07-07 06:15:54.449  INFO 17588 --- [http-nio-8080-exec-2] c.t.OtrsSystem.Security.JwtTokenFilter   : Process request to check for a JSON Web Token 
+2019-07-07 06:15:54.579  INFO 17588 --- [http-nio-8080-exec-2] c.t.OtrsSystem.Service.UserService       : New user attempting to sign in
+2019-07-07 06:15:54.606  INFO 17588 --- [http-nio-8080-exec-2] o.h.h.i.QueryTranslatorFactoryInitiator  : HHH000397: Using ASTQueryTranslatorFactory
+2019-07-07 06:15:55.124  WARN 17588 --- [http-nio-8080-exec-2] o.s.s.c.bcrypt.BCryptPasswordEncoder     : Encoded password does not look like BCrypt
+2019-07-07 06:15:55.129  INFO 17588 --- [http-nio-8080-exec-2] c.t.OtrsSystem.Service.UserService       : Log in failed for user rajugpt6@gmail.com
+2019-07-07 06:15:55.139  INFO 17588 --- [http-nio-8080-exec-2] c.t.OtrsSystem.Security.JwtTokenFilter   : Process request to check for a JSON Web Token 
+2019-07-07 06:17:20.374  INFO 17588 --- [http-nio-8080-exec-4] c.t.OtrsSystem.Security.JwtTokenFilter   : Process request to check for a JSON Web Token 
+2019-07-07 06:17:20.377  INFO 17588 --- [http-nio-8080-exec-4] c.t.OtrsSystem.Service.UserService       : New user attempting to sign in
+2019-07-07 06:17:20.388  WARN 17588 --- [http-nio-8080-exec-4] o.s.s.c.bcrypt.BCryptPasswordEncoder     : Encoded password does not look like BCrypt
+2019-07-07 06:17:20.388  INFO 17588 --- [http-nio-8080-exec-4] c.t.OtrsSystem.Service.UserService       : Log in failed for user rajugpt6@gmail.com
+2019-07-07 06:17:20.389  INFO 17588 --- [http-nio-8080-exec-4] c.t.OtrsSystem.Security.JwtTokenFilter   : Process request to check for a JSON Web Token 
+2019-07-07 06:17:33.294  INFO 8832 --- [main] c.t.OtrsSystem.OtrsSystemApplication     : Starting OtrsSystemApplication on DESKTOP-6LL63N7 with PID 8832 (D:\Techment\OtrsSystem\target\classes started by Raju in D:\Techment\OtrsSystem)
+2019-07-07 06:17:33.297 DEBUG 8832 --- [main] c.t.OtrsSystem.OtrsSystemApplication     : Running with Spring Boot v2.1.6.RELEASE, Spring v5.1.8.RELEASE
+2019-07-07 06:17:33.297  INFO 8832 --- [main] c.t.OtrsSystem.OtrsSystemApplication     : The following profiles are active: default
+2019-07-07 06:17:34.261  INFO 8832 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-07-07 06:17:34.350  INFO 8832 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 74ms. Found 4 repository interfaces.
+2019-07-07 06:17:34.810  INFO 8832 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$2ed2379b] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-07-07 06:17:34.847  INFO 8832 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.security.config.annotation.configuration.ObjectPostProcessorConfiguration' of type [org.springframework.security.config.annotation.configuration.ObjectPostProcessorConfiguration$$EnhancerBySpringCGLIB$$c77fffd5] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-07-07 06:17:34.853  INFO 8832 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'objectPostProcessor' of type [org.springframework.security.config.annotation.configuration.AutowireBeanFactoryObjectPostProcessor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-07-07 06:17:34.855  INFO 8832 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler@50194e8d' of type [org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-07-07 06:17:34.858  INFO 8832 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.security.config.annotation.method.configuration.GlobalMethodSecurityConfiguration' of type [org.springframework.security.config.annotation.method.configuration.GlobalMethodSecurityConfiguration$$EnhancerBySpringCGLIB$$ec54a287] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-07-07 06:17:34.861  INFO 8832 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'methodSecurityMetadataSource' of type [org.springframework.security.access.method.DelegatingMethodSecurityMetadataSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-07-07 06:17:34.865  INFO 8832 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.hateoas.config.HateoasConfiguration' of type [org.springframework.hateoas.config.HateoasConfiguration$$EnhancerBySpringCGLIB$$ae5284cd] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-07-07 06:17:35.440  INFO 8832 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2019-07-07 06:17:35.465  INFO 8832 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-07-07 06:17:35.465  INFO 8832 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.21]
+2019-07-07 06:17:35.655  INFO 8832 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2019-07-07 06:17:35.655  INFO 8832 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 2303 ms
+2019-07-07 06:17:35.953  INFO 8832 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2019-07-07 06:17:36.100  INFO 8832 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2019-07-07 06:17:36.161  INFO 8832 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2019-07-07 06:17:36.230  INFO 8832 --- [main] org.hibernate.Version                    : HHH000412: Hibernate Core {5.3.10.Final}
+2019-07-07 06:17:36.230  INFO 8832 --- [main] org.hibernate.cfg.Environment            : HHH000206: hibernate.properties not found
+2019-07-07 06:17:36.395  INFO 8832 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.0.4.Final}
+2019-07-07 06:17:36.544  INFO 8832 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2019-07-07 06:17:37.408  INFO 8832 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2019-07-07 06:17:38.691  INFO 8832 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2019-07-07 06:17:38.769  WARN 8832 --- [main] aWebConfiguration$JpaWebMvcConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2019-07-07 06:17:39.346  INFO 8832 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@22002459, org.springframework.security.web.context.SecurityContextPersistenceFilter@4e9ea32f, org.springframework.security.web.header.HeaderWriterFilter@4a5066f5, org.springframework.security.web.authentication.logout.LogoutFilter@2a259f6f, com.techment.OtrsSystem.Security.JwtTokenFilter@29bd056a, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@56ba8e8c, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@d271a54, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@21e702b8, org.springframework.security.web.session.SessionManagementFilter@586486c, org.springframework.security.web.access.ExceptionTranslationFilter@773c7147, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@6297cb4b]
+2019-07-07 06:17:39.466  INFO 8832 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2019-07-07 06:17:39.468  INFO 8832 --- [main] c.t.OtrsSystem.OtrsSystemApplication     : Started OtrsSystemApplication in 6.536 seconds (JVM running for 7.456)
+2019-07-07 06:17:51.364  INFO 8832 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-07-07 06:17:51.364  INFO 8832 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2019-07-07 06:17:51.383  INFO 8832 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 19 ms
+2019-07-07 06:17:51.399  INFO 8832 --- [http-nio-8080-exec-1] c.t.OtrsSystem.Security.JwtTokenFilter   : Process request to check for a JSON Web Token 
+2019-07-07 06:17:51.530  INFO 8832 --- [http-nio-8080-exec-1] c.t.OtrsSystem.Service.UserService       : New user attempting to sign in
+2019-07-07 06:17:51.553  INFO 8832 --- [http-nio-8080-exec-1] o.h.h.i.QueryTranslatorFactoryInitiator  : HHH000397: Using ASTQueryTranslatorFactory
+2019-07-07 06:17:52.126  WARN 8832 --- [http-nio-8080-exec-1] o.s.s.c.bcrypt.BCryptPasswordEncoder     : Encoded password does not look like BCrypt
+2019-07-07 06:17:52.141  INFO 8832 --- [http-nio-8080-exec-1] c.t.OtrsSystem.Service.UserService       : Log in failed for user rajugpt6@gmail.com
+2019-07-07 06:17:52.141  INFO 8832 --- [http-nio-8080-exec-1] c.t.OtrsSystem.Security.JwtTokenFilter   : Process request to check for a JSON Web Token 
+2019-07-07 06:21:38.287  INFO 12284 --- [main] c.t.OtrsSystem.OtrsSystemApplication     : Starting OtrsSystemApplication on DESKTOP-6LL63N7 with PID 12284 (D:\Techment\OtrsSystem\target\classes started by Raju in D:\Techment\OtrsSystem)
+2019-07-07 06:21:38.287 DEBUG 12284 --- [main] c.t.OtrsSystem.OtrsSystemApplication     : Running with Spring Boot v2.1.6.RELEASE, Spring v5.1.8.RELEASE
+2019-07-07 06:21:38.287  INFO 12284 --- [main] c.t.OtrsSystem.OtrsSystemApplication     : The following profiles are active: default
+2019-07-07 06:21:39.332  INFO 12284 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-07-07 06:21:39.421  INFO 12284 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 77ms. Found 4 repository interfaces.
+2019-07-07 06:21:39.878  INFO 12284 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$723b5875] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-07-07 06:21:39.923  INFO 12284 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.security.config.annotation.configuration.ObjectPostProcessorConfiguration' of type [org.springframework.security.config.annotation.configuration.ObjectPostProcessorConfiguration$$EnhancerBySpringCGLIB$$ae920af] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-07-07 06:21:39.927  INFO 12284 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'objectPostProcessor' of type [org.springframework.security.config.annotation.configuration.AutowireBeanFactoryObjectPostProcessor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-07-07 06:21:39.929  INFO 12284 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler@6aef4eb8' of type [org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-07-07 06:21:39.932  INFO 12284 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.security.config.annotation.method.configuration.GlobalMethodSecurityConfiguration' of type [org.springframework.security.config.annotation.method.configuration.GlobalMethodSecurityConfiguration$$EnhancerBySpringCGLIB$$2fbdc361] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-07-07 06:21:39.936  INFO 12284 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'methodSecurityMetadataSource' of type [org.springframework.security.access.method.DelegatingMethodSecurityMetadataSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-07-07 06:21:39.941  INFO 12284 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.hateoas.config.HateoasConfiguration' of type [org.springframework.hateoas.config.HateoasConfiguration$$EnhancerBySpringCGLIB$$f1bba5a7] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-07-07 06:21:40.527  INFO 12284 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2019-07-07 06:21:40.558  INFO 12284 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-07-07 06:21:40.558  INFO 12284 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.21]
+2019-07-07 06:21:40.746  INFO 12284 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2019-07-07 06:21:40.746  INFO 12284 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 2387 ms
+2019-07-07 06:21:41.001  INFO 12284 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2019-07-07 06:21:41.157  INFO 12284 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2019-07-07 06:21:41.214  INFO 12284 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2019-07-07 06:21:41.315  INFO 12284 --- [main] org.hibernate.Version                    : HHH000412: Hibernate Core {5.3.10.Final}
+2019-07-07 06:21:41.316  INFO 12284 --- [main] org.hibernate.cfg.Environment            : HHH000206: hibernate.properties not found
+2019-07-07 06:21:41.472  INFO 12284 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.0.4.Final}
+2019-07-07 06:21:41.640  INFO 12284 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2019-07-07 06:21:42.509  INFO 12284 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2019-07-07 06:21:43.817  INFO 12284 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2019-07-07 06:21:43.885  WARN 12284 --- [main] aWebConfiguration$JpaWebMvcConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2019-07-07 06:21:44.443  INFO 12284 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@4dffff9, org.springframework.security.web.context.SecurityContextPersistenceFilter@40ddf339, org.springframework.security.web.header.HeaderWriterFilter@7b795db7, org.springframework.security.web.authentication.logout.LogoutFilter@46fb9581, com.techment.OtrsSystem.Security.JwtTokenFilter@2904bc56, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@d271a54, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@5e80d5, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@7bb25046, org.springframework.security.web.session.SessionManagementFilter@4cf01c41, org.springframework.security.web.access.ExceptionTranslationFilter@1191029d, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@21e702b8]
+2019-07-07 06:21:44.574  INFO 12284 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2019-07-07 06:21:44.576  INFO 12284 --- [main] c.t.OtrsSystem.OtrsSystemApplication     : Started OtrsSystemApplication in 6.653 seconds (JVM running for 7.239)
+2019-07-07 06:21:51.046  INFO 12284 --- [http-nio-8080-exec-3] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-07-07 06:21:51.047  INFO 12284 --- [http-nio-8080-exec-3] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2019-07-07 06:21:51.070  INFO 12284 --- [http-nio-8080-exec-3] o.s.web.servlet.DispatcherServlet        : Completed initialization in 23 ms
+2019-07-07 06:21:51.085  INFO 12284 --- [http-nio-8080-exec-3] c.t.OtrsSystem.Security.JwtTokenFilter   : Process request to check for a JSON Web Token 
+2019-07-07 06:21:51.211  INFO 12284 --- [http-nio-8080-exec-3] c.t.OtrsSystem.Service.UserService       : New user attempting to sign in
+2019-07-07 06:21:51.237  INFO 12284 --- [http-nio-8080-exec-3] o.h.h.i.QueryTranslatorFactoryInitiator  : HHH000397: Using ASTQueryTranslatorFactory
+2019-07-07 06:21:51.761  WARN 12284 --- [http-nio-8080-exec-3] o.s.s.c.bcrypt.BCryptPasswordEncoder     : Encoded password does not look like BCrypt
+2019-07-07 06:21:51.765  INFO 12284 --- [http-nio-8080-exec-3] c.t.OtrsSystem.Service.UserService       : Log in failed for user rajugpt6@gmail.com
+2019-07-07 06:21:51.774  INFO 12284 --- [http-nio-8080-exec-3] c.t.OtrsSystem.Security.JwtTokenFilter   : Process request to check for a JSON Web Token 
+2019-07-07 06:22:56.925  INFO 24964 --- [main] c.t.OtrsSystem.OtrsSystemApplication     : Starting OtrsSystemApplication on DESKTOP-6LL63N7 with PID 24964 (D:\Techment\OtrsSystem\target\classes started by Raju in D:\Techment\OtrsSystem)
+2019-07-07 06:22:56.929 DEBUG 24964 --- [main] c.t.OtrsSystem.OtrsSystemApplication     : Running with Spring Boot v2.1.6.RELEASE, Spring v5.1.8.RELEASE
+2019-07-07 06:22:56.929  INFO 24964 --- [main] c.t.OtrsSystem.OtrsSystemApplication     : The following profiles are active: default
+2019-07-07 06:22:58.175  INFO 24964 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-07-07 06:22:58.253  INFO 24964 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 78ms. Found 4 repository interfaces.
+2019-07-07 06:22:58.690  INFO 24964 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$f536cf4] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-07-07 06:22:58.753  INFO 24964 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.security.config.annotation.configuration.ObjectPostProcessorConfiguration' of type [org.springframework.security.config.annotation.configuration.ObjectPostProcessorConfiguration$$EnhancerBySpringCGLIB$$a801352e] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-07-07 06:22:58.753  INFO 24964 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'objectPostProcessor' of type [org.springframework.security.config.annotation.configuration.AutowireBeanFactoryObjectPostProcessor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-07-07 06:22:58.753  INFO 24964 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler@1ab6718' of type [org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-07-07 06:22:58.753  INFO 24964 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.security.config.annotation.method.configuration.GlobalMethodSecurityConfiguration' of type [org.springframework.security.config.annotation.method.configuration.GlobalMethodSecurityConfiguration$$EnhancerBySpringCGLIB$$ccd5d7e0] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-07-07 06:22:58.769  INFO 24964 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'methodSecurityMetadataSource' of type [org.springframework.security.access.method.DelegatingMethodSecurityMetadataSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-07-07 06:22:58.769  INFO 24964 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.hateoas.config.HateoasConfiguration' of type [org.springframework.hateoas.config.HateoasConfiguration$$EnhancerBySpringCGLIB$$8ed3ba26] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-07-07 06:22:59.368  INFO 24964 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2019-07-07 06:22:59.394  INFO 24964 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-07-07 06:22:59.394  INFO 24964 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.21]
+2019-07-07 06:22:59.584  INFO 24964 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2019-07-07 06:22:59.585  INFO 24964 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 2604 ms
+2019-07-07 06:22:59.858  INFO 24964 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2019-07-07 06:23:00.020  INFO 24964 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2019-07-07 06:23:00.094  INFO 24964 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2019-07-07 06:23:00.175  INFO 24964 --- [main] org.hibernate.Version                    : HHH000412: Hibernate Core {5.3.10.Final}
+2019-07-07 06:23:00.175  INFO 24964 --- [main] org.hibernate.cfg.Environment            : HHH000206: hibernate.properties not found
+2019-07-07 06:23:00.303  INFO 24964 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.0.4.Final}
+2019-07-07 06:23:00.451  INFO 24964 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2019-07-07 06:23:01.271  INFO 24964 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2019-07-07 06:23:01.902  WARN 24964 --- [main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'userController': Unsatisfied dependency expressed through field 'userService'; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'userService': Unsatisfied dependency expressed through field 'passwordEncoder'; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
+2019-07-07 06:23:01.903  INFO 24964 --- [main] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2019-07-07 06:23:01.905  INFO 24964 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2019-07-07 06:23:01.919  INFO 24964 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2019-07-07 06:23:01.921  INFO 24964 --- [main] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2019-07-07 06:23:01.931  INFO 24964 --- [main] ConditionEvaluationReportLoggingListener : 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2019-07-07 06:23:02.056 ERROR 24964 --- [main] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Field passwordEncoder in com.techment.OtrsSystem.Service.UserService required a bean of type 'org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder' that could not be found.
+
+The injection point has the following annotations:
+	- @org.springframework.beans.factory.annotation.Autowired(required=true)
+
+
+Action:
+
+Consider defining a bean of type 'org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder' in your configuration.
+
+2019-07-07 06:23:32.869  INFO 22780 --- [main] c.t.OtrsSystem.OtrsSystemApplication     : Starting OtrsSystemApplication on DESKTOP-6LL63N7 with PID 22780 (D:\Techment\OtrsSystem\target\classes started by Raju in D:\Techment\OtrsSystem)
+2019-07-07 06:23:32.872 DEBUG 22780 --- [main] c.t.OtrsSystem.OtrsSystemApplication     : Running with Spring Boot v2.1.6.RELEASE, Spring v5.1.8.RELEASE
+2019-07-07 06:23:32.872  INFO 22780 --- [main] c.t.OtrsSystem.OtrsSystemApplication     : The following profiles are active: default
+2019-07-07 06:23:33.836  INFO 22780 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-07-07 06:23:33.920  INFO 22780 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 75ms. Found 4 repository interfaces.
+2019-07-07 06:23:34.456  INFO 22780 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$d45a67f] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-07-07 06:23:34.511  INFO 22780 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.security.config.annotation.configuration.ObjectPostProcessorConfiguration' of type [org.springframework.security.config.annotation.configuration.ObjectPostProcessorConfiguration$$EnhancerBySpringCGLIB$$a5f36eb9] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-07-07 06:23:34.519  INFO 22780 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'objectPostProcessor' of type [org.springframework.security.config.annotation.configuration.AutowireBeanFactoryObjectPostProcessor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-07-07 06:23:34.521  INFO 22780 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler@30814f43' of type [org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-07-07 06:23:34.522  INFO 22780 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.security.config.annotation.method.configuration.GlobalMethodSecurityConfiguration' of type [org.springframework.security.config.annotation.method.configuration.GlobalMethodSecurityConfiguration$$EnhancerBySpringCGLIB$$cac8116b] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-07-07 06:23:34.526  INFO 22780 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'methodSecurityMetadataSource' of type [org.springframework.security.access.method.DelegatingMethodSecurityMetadataSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-07-07 06:23:34.532  INFO 22780 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.hateoas.config.HateoasConfiguration' of type [org.springframework.hateoas.config.HateoasConfiguration$$EnhancerBySpringCGLIB$$8cc5f3b1] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-07-07 06:23:35.108  INFO 22780 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2019-07-07 06:23:35.126  INFO 22780 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-07-07 06:23:35.126  INFO 22780 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.21]
+2019-07-07 06:23:35.333  INFO 22780 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2019-07-07 06:23:35.333  INFO 22780 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 2394 ms
+2019-07-07 06:23:35.609  INFO 22780 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2019-07-07 06:23:35.753  INFO 22780 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2019-07-07 06:23:35.830  INFO 22780 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2019-07-07 06:23:35.918  INFO 22780 --- [main] org.hibernate.Version                    : HHH000412: Hibernate Core {5.3.10.Final}
+2019-07-07 06:23:35.920  INFO 22780 --- [main] org.hibernate.cfg.Environment            : HHH000206: hibernate.properties not found
+2019-07-07 06:23:36.056  INFO 22780 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.0.4.Final}
+2019-07-07 06:23:36.190  INFO 22780 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2019-07-07 06:23:37.060  INFO 22780 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2019-07-07 06:23:38.395  INFO 22780 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2019-07-07 06:23:38.489  WARN 22780 --- [main] aWebConfiguration$JpaWebMvcConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2019-07-07 06:23:39.046  INFO 22780 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@46fb9581, org.springframework.security.web.context.SecurityContextPersistenceFilter@10408ea, org.springframework.security.web.header.HeaderWriterFilter@484b5a21, org.springframework.security.web.authentication.logout.LogoutFilter@7b795db7, com.techment.OtrsSystem.Security.JwtTokenFilter@6fcc0a1, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@186dcb05, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@1c610f, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@416b681c, org.springframework.security.web.session.SessionManagementFilter@2bc2e022, org.springframework.security.web.access.ExceptionTranslationFilter@26712838, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@3df3410a]
+2019-07-07 06:23:39.196  INFO 22780 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2019-07-07 06:23:39.196  INFO 22780 --- [main] c.t.OtrsSystem.OtrsSystemApplication     : Started OtrsSystemApplication in 6.671 seconds (JVM running for 7.271)
+2019-07-07 06:23:47.358  INFO 22780 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-07-07 06:23:47.358  INFO 22780 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2019-07-07 06:23:47.378  INFO 22780 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 20 ms
+2019-07-07 06:23:47.395  INFO 22780 --- [http-nio-8080-exec-1] c.t.OtrsSystem.Security.JwtTokenFilter   : Process request to check for a JSON Web Token 
+2019-07-07 06:23:47.521  INFO 22780 --- [http-nio-8080-exec-1] c.t.OtrsSystem.Service.UserService       : New user attempting to sign in
+2019-07-07 06:23:47.546  INFO 22780 --- [http-nio-8080-exec-1] o.h.h.i.QueryTranslatorFactoryInitiator  : HHH000397: Using ASTQueryTranslatorFactory
+2019-07-07 06:23:48.068  WARN 22780 --- [http-nio-8080-exec-1] o.s.s.c.bcrypt.BCryptPasswordEncoder     : Encoded password does not look like BCrypt
+2019-07-07 06:23:48.073  INFO 22780 --- [http-nio-8080-exec-1] c.t.OtrsSystem.Service.UserService       : Log in failed for user rajugpt6@gmail.com
+2019-07-07 06:23:48.081  INFO 22780 --- [http-nio-8080-exec-1] c.t.OtrsSystem.Security.JwtTokenFilter   : Process request to check for a JSON Web Token 
+2019-07-07 06:24:35.432  INFO 11260 --- [main] c.t.OtrsSystem.OtrsSystemApplication     : Starting OtrsSystemApplication on DESKTOP-6LL63N7 with PID 11260 (D:\Techment\OtrsSystem\target\classes started by Raju in D:\Techment\OtrsSystem)
+2019-07-07 06:24:35.435 DEBUG 11260 --- [main] c.t.OtrsSystem.OtrsSystemApplication     : Running with Spring Boot v2.1.6.RELEASE, Spring v5.1.8.RELEASE
+2019-07-07 06:24:35.435  INFO 11260 --- [main] c.t.OtrsSystem.OtrsSystemApplication     : The following profiles are active: default
+2019-07-07 06:24:36.484  INFO 11260 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-07-07 06:24:36.575  INFO 11260 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 81ms. Found 4 repository interfaces.
+2019-07-07 06:24:37.047  INFO 11260 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$107b837e] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-07-07 06:24:37.089  INFO 11260 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.security.config.annotation.configuration.ObjectPostProcessorConfiguration' of type [org.springframework.security.config.annotation.configuration.ObjectPostProcessorConfiguration$$EnhancerBySpringCGLIB$$a9294bb8] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-07-07 06:24:37.096  INFO 11260 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'objectPostProcessor' of type [org.springframework.security.config.annotation.configuration.AutowireBeanFactoryObjectPostProcessor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-07-07 06:24:37.098  INFO 11260 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler@7144655b' of type [org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-07-07 06:24:37.103  INFO 11260 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.security.config.annotation.method.configuration.GlobalMethodSecurityConfiguration' of type [org.springframework.security.config.annotation.method.configuration.GlobalMethodSecurityConfiguration$$EnhancerBySpringCGLIB$$cdfdee6a] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-07-07 06:24:37.106  INFO 11260 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'methodSecurityMetadataSource' of type [org.springframework.security.access.method.DelegatingMethodSecurityMetadataSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-07-07 06:24:37.113  INFO 11260 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.hateoas.config.HateoasConfiguration' of type [org.springframework.hateoas.config.HateoasConfiguration$$EnhancerBySpringCGLIB$$8ffbd0b0] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-07-07 06:24:37.725  INFO 11260 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2019-07-07 06:24:37.756  INFO 11260 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-07-07 06:24:37.756  INFO 11260 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.21]
+2019-07-07 06:24:37.983  INFO 11260 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2019-07-07 06:24:37.983  INFO 11260 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 2474 ms
+2019-07-07 06:24:38.298  INFO 11260 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2019-07-07 06:24:38.465  INFO 11260 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2019-07-07 06:24:38.537  INFO 11260 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2019-07-07 06:24:38.621  INFO 11260 --- [main] org.hibernate.Version                    : HHH000412: Hibernate Core {5.3.10.Final}
+2019-07-07 06:24:38.622  INFO 11260 --- [main] org.hibernate.cfg.Environment            : HHH000206: hibernate.properties not found
+2019-07-07 06:24:38.763  INFO 11260 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.0.4.Final}
+2019-07-07 06:24:38.904  INFO 11260 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2019-07-07 06:24:39.787  INFO 11260 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2019-07-07 06:24:41.052  INFO 11260 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2019-07-07 06:24:41.111  WARN 11260 --- [main] aWebConfiguration$JpaWebMvcConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2019-07-07 06:24:41.690  INFO 11260 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@46d69ca4, org.springframework.security.web.context.SecurityContextPersistenceFilter@1d0dad12, org.springframework.security.web.header.HeaderWriterFilter@47fca3cc, org.springframework.security.web.authentication.logout.LogoutFilter@7fbbdd8a, com.techment.OtrsSystem.Security.JwtTokenFilter@5c9b5e62, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@58a8ea6f, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@5c3007d, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@3c826498, org.springframework.security.web.session.SessionManagementFilter@10408ea, org.springframework.security.web.access.ExceptionTranslationFilter@11978f52, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@6614289a]
+2019-07-07 06:24:41.841  INFO 11260 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2019-07-07 06:24:41.843  INFO 11260 --- [main] c.t.OtrsSystem.OtrsSystemApplication     : Started OtrsSystemApplication in 6.744 seconds (JVM running for 7.381)
+2019-07-07 06:28:42.140  INFO 11260 --- [http-nio-8080-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-07-07 06:28:42.140  INFO 11260 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2019-07-07 06:28:42.166  INFO 11260 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 25 ms
+2019-07-07 06:28:42.182  INFO 11260 --- [http-nio-8080-exec-2] c.t.OtrsSystem.Security.JwtTokenFilter   : Process request to check for a JSON Web Token 
+2019-07-07 06:28:42.197  INFO 11260 --- [http-nio-8080-exec-2] c.t.OtrsSystem.Security.JwtTokenFilter   : Process request to check for a JSON Web Token 
+2019-07-07 06:29:00.841  INFO 18844 --- [main] c.t.OtrsSystem.OtrsSystemApplication     : Starting OtrsSystemApplication on DESKTOP-6LL63N7 with PID 18844 (D:\Techment\OtrsSystem\target\classes started by Raju in D:\Techment\OtrsSystem)
+2019-07-07 06:29:00.841 DEBUG 18844 --- [main] c.t.OtrsSystem.OtrsSystemApplication     : Running with Spring Boot v2.1.6.RELEASE, Spring v5.1.8.RELEASE
+2019-07-07 06:29:00.841  INFO 18844 --- [main] c.t.OtrsSystem.OtrsSystemApplication     : The following profiles are active: default
+2019-07-07 06:29:01.855  INFO 18844 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-07-07 06:29:01.918  INFO 18844 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 63ms. Found 4 repository interfaces.
+2019-07-07 06:29:02.417  INFO 18844 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$a203968e] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-07-07 06:29:02.459  INFO 18844 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.security.config.annotation.configuration.ObjectPostProcessorConfiguration' of type [org.springframework.security.config.annotation.configuration.ObjectPostProcessorConfiguration$$EnhancerBySpringCGLIB$$3ab15ec8] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-07-07 06:29:02.464  INFO 18844 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'objectPostProcessor' of type [org.springframework.security.config.annotation.configuration.AutowireBeanFactoryObjectPostProcessor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-07-07 06:29:02.466  INFO 18844 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler@57a48985' of type [org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-07-07 06:29:02.469  INFO 18844 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.security.config.annotation.method.configuration.GlobalMethodSecurityConfiguration' of type [org.springframework.security.config.annotation.method.configuration.GlobalMethodSecurityConfiguration$$EnhancerBySpringCGLIB$$5f86017a] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-07-07 06:29:02.473  INFO 18844 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'methodSecurityMetadataSource' of type [org.springframework.security.access.method.DelegatingMethodSecurityMetadataSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-07-07 06:29:02.480  INFO 18844 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.hateoas.config.HateoasConfiguration' of type [org.springframework.hateoas.config.HateoasConfiguration$$EnhancerBySpringCGLIB$$2183e3c0] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-07-07 06:29:03.078  INFO 18844 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2019-07-07 06:29:03.111  INFO 18844 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-07-07 06:29:03.112  INFO 18844 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.21]
+2019-07-07 06:29:03.308  INFO 18844 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2019-07-07 06:29:03.308  INFO 18844 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 2388 ms
+2019-07-07 06:29:03.596  INFO 18844 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2019-07-07 06:29:03.747  INFO 18844 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2019-07-07 06:29:03.809  INFO 18844 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2019-07-07 06:29:03.903  INFO 18844 --- [main] org.hibernate.Version                    : HHH000412: Hibernate Core {5.3.10.Final}
+2019-07-07 06:29:03.903  INFO 18844 --- [main] org.hibernate.cfg.Environment            : HHH000206: hibernate.properties not found
+2019-07-07 06:29:04.028  INFO 18844 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.0.4.Final}
+2019-07-07 06:29:04.182  INFO 18844 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2019-07-07 06:29:05.027  INFO 18844 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2019-07-07 06:29:06.324  INFO 18844 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2019-07-07 06:29:06.402  WARN 18844 --- [main] aWebConfiguration$JpaWebMvcConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2019-07-07 06:29:06.902  INFO 18844 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@335cdd2, org.springframework.security.web.context.SecurityContextPersistenceFilter@46fb9581, org.springframework.security.web.header.HeaderWriterFilter@78861d9e, org.springframework.security.web.authentication.logout.LogoutFilter@65d6640, com.techment.OtrsSystem.Security.JwtTokenFilter@1ea96ff2, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@416b681c, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@7d156f8f, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@60a99f3d, org.springframework.security.web.session.SessionManagementFilter@61d42275, org.springframework.security.web.access.ExceptionTranslationFilter@66a8751a, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@4b22214d]
+2019-07-07 06:29:07.012  INFO 18844 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2019-07-07 06:29:07.012  INFO 18844 --- [main] c.t.OtrsSystem.OtrsSystemApplication     : Started OtrsSystemApplication in 6.516 seconds (JVM running for 7.169)
+2019-07-07 06:29:15.984  INFO 18844 --- [http-nio-8080-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-07-07 06:29:15.984  INFO 18844 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2019-07-07 06:29:16.015  INFO 18844 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 31 ms
+2019-07-07 06:29:16.031  INFO 18844 --- [http-nio-8080-exec-2] c.t.OtrsSystem.Security.JwtTokenFilter   : Process request to check for a JSON Web Token 
+2019-07-07 06:29:16.193  INFO 18844 --- [http-nio-8080-exec-2] c.t.OtrsSystem.Security.JwtTokenFilter   : Process request to check for a JSON Web Token 
+2019-07-07 06:29:53.098  INFO 18844 --- [http-nio-8080-exec-3] c.t.OtrsSystem.Security.JwtTokenFilter   : Process request to check for a JSON Web Token 
+2019-07-07 06:29:53.099  INFO 18844 --- [http-nio-8080-exec-3] c.t.OtrsSystem.Security.JwtTokenFilter   : Process request to check for a JSON Web Token 
+2019-07-07 06:30:56.623  INFO 13140 --- [main] c.t.OtrsSystem.OtrsSystemApplication     : Starting OtrsSystemApplication on DESKTOP-6LL63N7 with PID 13140 (D:\Techment\OtrsSystem\target\classes started by Raju in D:\Techment\OtrsSystem)
+2019-07-07 06:30:56.626 DEBUG 13140 --- [main] c.t.OtrsSystem.OtrsSystemApplication     : Running with Spring Boot v2.1.6.RELEASE, Spring v5.1.8.RELEASE
+2019-07-07 06:30:56.626  INFO 13140 --- [main] c.t.OtrsSystem.OtrsSystemApplication     : The following profiles are active: default
+2019-07-07 06:30:57.659  INFO 13140 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-07-07 06:30:57.731  INFO 13140 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 64ms. Found 4 repository interfaces.
+2019-07-07 06:30:58.198  INFO 13140 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$bec2d2e5] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-07-07 06:30:58.232  INFO 13140 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.security.config.annotation.configuration.ObjectPostProcessorConfiguration' of type [org.springframework.security.config.annotation.configuration.ObjectPostProcessorConfiguration$$EnhancerBySpringCGLIB$$57709b1f] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-07-07 06:30:58.232  INFO 13140 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'objectPostProcessor' of type [org.springframework.security.config.annotation.configuration.AutowireBeanFactoryObjectPostProcessor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-07-07 06:30:58.232  INFO 13140 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler@7d0cc890' of type [org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-07-07 06:30:58.248  INFO 13140 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.security.config.annotation.method.configuration.GlobalMethodSecurityConfiguration' of type [org.springframework.security.config.annotation.method.configuration.GlobalMethodSecurityConfiguration$$EnhancerBySpringCGLIB$$7c453dd1] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-07-07 06:30:58.248  INFO 13140 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'methodSecurityMetadataSource' of type [org.springframework.security.access.method.DelegatingMethodSecurityMetadataSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-07-07 06:30:58.248  INFO 13140 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.hateoas.config.HateoasConfiguration' of type [org.springframework.hateoas.config.HateoasConfiguration$$EnhancerBySpringCGLIB$$3e432017] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-07-07 06:30:58.825  INFO 13140 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2019-07-07 06:30:58.856  INFO 13140 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-07-07 06:30:58.856  INFO 13140 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.21]
+2019-07-07 06:30:59.044  INFO 13140 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2019-07-07 06:30:59.044  INFO 13140 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 2360 ms
+2019-07-07 06:30:59.356  INFO 13140 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2019-07-07 06:30:59.512  INFO 13140 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2019-07-07 06:30:59.590  INFO 13140 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2019-07-07 06:30:59.678  INFO 13140 --- [main] org.hibernate.Version                    : HHH000412: Hibernate Core {5.3.10.Final}
+2019-07-07 06:30:59.680  INFO 13140 --- [main] org.hibernate.cfg.Environment            : HHH000206: hibernate.properties not found
+2019-07-07 06:30:59.809  INFO 13140 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.0.4.Final}
+2019-07-07 06:30:59.981  INFO 13140 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2019-07-07 06:31:00.872  INFO 13140 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2019-07-07 06:31:02.147  INFO 13140 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2019-07-07 06:31:02.215  WARN 13140 --- [main] aWebConfiguration$JpaWebMvcConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2019-07-07 06:31:02.793  INFO 13140 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@6ff8e744, org.springframework.security.web.context.SecurityContextPersistenceFilter@52290e63, org.springframework.security.web.header.HeaderWriterFilter@38923cfe, org.springframework.security.web.authentication.logout.LogoutFilter@186dcb05, com.techment.OtrsSystem.Security.JwtTokenFilter@409395b9, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@49d979c4, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@484b5a21, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@53e82089, org.springframework.security.web.session.SessionManagementFilter@5bccaedb, org.springframework.security.web.access.ExceptionTranslationFilter@299786b1, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@57bac3f0]
+2019-07-07 06:31:02.887  INFO 13140 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2019-07-07 06:31:02.887  INFO 13140 --- [main] c.t.OtrsSystem.OtrsSystemApplication     : Started OtrsSystemApplication in 6.625 seconds (JVM running for 7.197)
+2019-07-07 06:31:07.585  INFO 13140 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-07-07 06:31:07.585  INFO 13140 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2019-07-07 06:31:07.613  INFO 13140 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 28 ms
+2019-07-07 06:31:07.632  INFO 13140 --- [http-nio-8080-exec-1] c.t.OtrsSystem.Security.JwtTokenFilter   : Process request to check for a JSON Web Token 
+2019-07-07 06:31:07.648  INFO 13140 --- [http-nio-8080-exec-1] c.t.OtrsSystem.Security.JwtTokenFilter   : Process request to check for a JSON Web Token 
+2019-07-07 06:31:17.453  INFO 13140 --- [http-nio-8080-exec-3] c.t.OtrsSystem.Security.JwtTokenFilter   : Process request to check for a JSON Web Token 
+2019-07-07 06:31:17.518  INFO 13140 --- [http-nio-8080-exec-3] c.t.OtrsSystem.Service.UserService       : New user attempting to sign in
+2019-07-07 06:31:17.553  INFO 13140 --- [http-nio-8080-exec-3] o.h.h.i.QueryTranslatorFactoryInitiator  : HHH000397: Using ASTQueryTranslatorFactory
+2019-07-07 06:33:28.090  INFO 13140 --- [http-nio-8080-exec-6] c.t.OtrsSystem.Security.JwtTokenFilter   : Process request to check for a JSON Web Token 
+2019-07-07 06:33:28.093  INFO 13140 --- [http-nio-8080-exec-6] c.t.OtrsSystem.Service.UserService       : New user attempting to sign in
+2019-07-07 06:39:11.657  INFO 5432 --- [main] c.t.OtrsSystem.OtrsSystemApplication     : Starting OtrsSystemApplication on DESKTOP-6LL63N7 with PID 5432 (D:\Techment\OtrsSystem\target\classes started by Raju in D:\Techment\OtrsSystem)
+2019-07-07 06:39:11.660 DEBUG 5432 --- [main] c.t.OtrsSystem.OtrsSystemApplication     : Running with Spring Boot v2.1.6.RELEASE, Spring v5.1.8.RELEASE
+2019-07-07 06:39:11.660  INFO 5432 --- [main] c.t.OtrsSystem.OtrsSystemApplication     : The following profiles are active: default
+2019-07-07 06:39:12.677  INFO 5432 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-07-07 06:39:12.760  INFO 5432 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 74ms. Found 4 repository interfaces.
+2019-07-07 06:39:13.261  INFO 5432 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$5cffb82c] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-07-07 06:39:13.308  INFO 5432 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.security.config.annotation.configuration.ObjectPostProcessorConfiguration' of type [org.springframework.security.config.annotation.configuration.ObjectPostProcessorConfiguration$$EnhancerBySpringCGLIB$$f5ad8066] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-07-07 06:39:13.316  INFO 5432 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'objectPostProcessor' of type [org.springframework.security.config.annotation.configuration.AutowireBeanFactoryObjectPostProcessor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-07-07 06:39:13.318  INFO 5432 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler@1f387978' of type [org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-07-07 06:39:13.320  INFO 5432 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.security.config.annotation.method.configuration.GlobalMethodSecurityConfiguration' of type [org.springframework.security.config.annotation.method.configuration.GlobalMethodSecurityConfiguration$$EnhancerBySpringCGLIB$$1a822318] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-07-07 06:39:13.324  INFO 5432 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'methodSecurityMetadataSource' of type [org.springframework.security.access.method.DelegatingMethodSecurityMetadataSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-07-07 06:39:13.331  INFO 5432 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.hateoas.config.HateoasConfiguration' of type [org.springframework.hateoas.config.HateoasConfiguration$$EnhancerBySpringCGLIB$$dc80055e] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-07-07 06:39:13.959  INFO 5432 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2019-07-07 06:39:13.985  INFO 5432 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-07-07 06:39:13.985  INFO 5432 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.21]
+2019-07-07 06:39:14.173  INFO 5432 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2019-07-07 06:39:14.173  INFO 5432 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 2452 ms
+2019-07-07 06:39:14.450  INFO 5432 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2019-07-07 06:39:14.597  INFO 5432 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2019-07-07 06:39:14.658  INFO 5432 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2019-07-07 06:39:14.740  INFO 5432 --- [main] org.hibernate.Version                    : HHH000412: Hibernate Core {5.3.10.Final}
+2019-07-07 06:39:14.742  INFO 5432 --- [main] org.hibernate.cfg.Environment            : HHH000206: hibernate.properties not found
+2019-07-07 06:39:14.883  INFO 5432 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.0.4.Final}
+2019-07-07 06:39:15.024  INFO 5432 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2019-07-07 06:39:16.071  INFO 5432 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2019-07-07 06:39:17.359  INFO 5432 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2019-07-07 06:39:17.437  WARN 5432 --- [main] aWebConfiguration$JpaWebMvcConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2019-07-07 06:39:18.014  INFO 5432 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@73a5d86c, org.springframework.security.web.context.SecurityContextPersistenceFilter@2820b369, org.springframework.security.web.header.HeaderWriterFilter@5c5f12e, org.springframework.security.web.authentication.logout.LogoutFilter@6cfd08e9, com.techment.OtrsSystem.Security.JwtTokenFilter@2cf88901, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@476c137b, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@4f6ff62, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@4780341, org.springframework.security.web.session.SessionManagementFilter@85cd413, org.springframework.security.web.access.ExceptionTranslationFilter@34070bd2, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@1280bae3]
+2019-07-07 06:39:18.145  INFO 5432 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2019-07-07 06:39:18.147  INFO 5432 --- [main] c.t.OtrsSystem.OtrsSystemApplication     : Started OtrsSystemApplication in 6.836 seconds (JVM running for 7.432)
+2019-07-07 06:39:23.697  INFO 5432 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-07-07 06:39:23.697  INFO 5432 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2019-07-07 06:39:23.716  INFO 5432 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 19 ms
+2019-07-07 06:39:23.729  INFO 5432 --- [http-nio-8080-exec-1] c.t.OtrsSystem.Security.JwtTokenFilter   : Process request to check for a JSON Web Token 
+2019-07-07 06:39:23.839  INFO 5432 --- [http-nio-8080-exec-1] c.t.OtrsSystem.Service.UserService       : New user attempting to sign in
+2019-07-07 06:39:23.859  INFO 5432 --- [http-nio-8080-exec-1] o.h.h.i.QueryTranslatorFactoryInitiator  : HHH000397: Using ASTQueryTranslatorFactory
+2019-07-07 06:39:57.411  INFO 5432 --- [http-nio-8080-exec-3] c.t.OtrsSystem.Security.JwtTokenFilter   : Process request to check for a JSON Web Token 
+2019-07-07 06:39:57.413  INFO 5432 --- [http-nio-8080-exec-3] c.t.OtrsSystem.Service.UserService       : New user attempting to sign in
