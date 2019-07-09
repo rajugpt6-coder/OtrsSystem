@@ -7,11 +7,13 @@ import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.security.access.prepost.PreAuthorize;
+import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.client.HttpServerErrorException;
 
 import javax.validation.Valid;
 import java.util.List;
+import java.util.Optional;
 
 @RestController
 @RequestMapping("/users")
@@ -38,5 +40,20 @@ public class UserController {
     @PreAuthorize("hasRole('ROLE_ADMIN') or hasRole('ROLE_CSR')")
     public List<User> getAllUsers() {
         return userService.getAll();
+    }
+
+    @PostMapping("/resolver")
+    @PreAuthorize("hasRole('ROLE_ADMIN')")
+    @ResponseStatus(HttpStatus.CREATED)
+    public Optional<User> createResolver(@RequestBody @Validated LoginDto loginDto) {
+        return userService.createResolver(loginDto.getUsername(), loginDto.getPassword(), loginDto.getFirstName(),
+                loginDto.getLastName(), loginDto.getMiddleName(), loginDto.getPhoneNo());
+    }
+
+    @DeleteMapping("/{id}")
+    @PreAuthorize("hasRole('ROLE_ADMIN')")
+    @ResponseStatus(HttpStatus.OK)
+    public void deleteUser(@PathVariable("id") long id){
+        userService.deleteUser(id);
     }
 }

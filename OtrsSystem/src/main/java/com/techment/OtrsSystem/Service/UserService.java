@@ -3,6 +3,7 @@ package com.techment.OtrsSystem.Service;
 import com.techment.OtrsSystem.Repository.RoleRepository;
 import com.techment.OtrsSystem.Repository.UserRepository;
 import com.techment.OtrsSystem.Security.JwtProvider;
+import com.techment.OtrsSystem.domain.CustomerServiceRepresentative;
 import com.techment.OtrsSystem.domain.Role;
 import com.techment.OtrsSystem.domain.User;
 import org.slf4j.Logger;
@@ -85,20 +86,7 @@ public class UserService {
      */
     public Optional<User> signup(String username, String password, String firstName, String lastName, String middleName, String phoneNo) {
         LOGGER.info("New user attempting to sign up");
-        Optional<User> user = Optional.empty();
-
-        if (!userRepository.findByEmail(username).isPresent()) {
-            Optional<Role> role = roleRepository.findByRoleName("ROLE_ADMIN");
-            user = Optional.of(userRepository.save(new User(username,
-                    passwordEncoder.encode(password),
-                    firstName,
-                    middleName,
-                    lastName,
-                    phoneNo,
-                    role.get()
-                   )));
-        }
-        return user;
+        return createUser("ROLE_USER", username, password, firstName, lastName,middleName, phoneNo);
     }
 
     public List<User> getAll() {
@@ -107,5 +95,37 @@ public class UserService {
 
     public Boolean isExist(long id){
         return userRepository.existsById(id);
+    }
+
+    public CustomerServiceRepresentative getCustomerServiceRepresentative(long id){
+        return userRepository.findCustomerServiceRepresentativeById(id);
+    }
+
+    public Optional<User> createResolver( String username, String password, String firstName,
+                                          String lastName, String middleName, String phoneNo) {
+        return createUser("ROLE_CSR",  username, password, firstName,
+                 lastName,  middleName,  phoneNo);
+    }
+
+    private Optional<User> createUser(String role, String username, String password, String firstName,
+                            String lastName, String middleName, String phoneNo) {
+        Optional<User> user = Optional.empty();
+
+        if (!userRepository.findByEmail(username).isPresent()) {
+            Optional<Role> roles = roleRepository.findByRoleName(role);
+            user = Optional.of(userRepository.save(new User(username,
+                    passwordEncoder.encode(password),
+                    firstName,
+                    middleName,
+                    lastName,
+                    phoneNo,
+                    roles.get()
+            )));
+        }
+        return user;
+    }
+
+    public void deleteUser(long id) {
+         userRepository.deleteById(id);
     }
 }
