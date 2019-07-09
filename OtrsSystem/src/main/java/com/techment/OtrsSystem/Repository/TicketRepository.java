@@ -22,4 +22,8 @@ public interface TicketRepository extends JpaRepository<Ticket, Long> {
     @Modifying
     @Query(value = "update Ticket ticket set ticket.status =:status where ticket.id =:id")
     void updateTicketStatus(@Param("status") String status, @Param("id") long id);
+
+    long countTicketByCategory(String category);
+
+    long countTicketByCategoryAndStatus(String category, String status);
 }

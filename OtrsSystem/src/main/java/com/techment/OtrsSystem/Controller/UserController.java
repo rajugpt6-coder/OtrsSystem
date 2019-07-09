@@ -19,14 +19,15 @@ import java.util.Optional;
 @RequestMapping("/users")
 public class UserController {
     private static final Logger LOGGER = LoggerFactory.getLogger(UserController.class);
+    private static final String STATUS_ACTIVE = "active";
 
     @Autowired
     private UserService userService;
 
     @PostMapping("/signin")
+    @ResponseStatus(HttpStatus.OK)
     public String login(@RequestBody @Valid LoginDto loginDto) {
-        return userService.signin(loginDto.getUsername(), loginDto.getPassword()).orElseThrow(()->
-                new HttpServerErrorException(HttpStatus.FORBIDDEN, "Login Failed"));
+        return userService.signin(loginDto.getUsername(), loginDto.getPassword());
     }
 
     @PostMapping("/signup")
@@ -35,6 +36,18 @@ public class UserController {
         return userService.signup(loginDto.getUsername(), loginDto.getPassword(), loginDto.getFirstName(),
                 loginDto.getLastName(), loginDto.getMiddleName(), loginDto.getPhoneNo()).orElseThrow(() -> new HttpServerErrorException(HttpStatus.BAD_REQUEST,"User already exists"));
     }
+
+    @GetMapping("/{id}")
+    @PreAuthorize("hasRole('ROLE_ADMIN')")
+    public Optional<User> getUserDetails(@PathVariable("id") long id) {
+        return userService.findUserById(id);
+    }
+
+//    @GetMapping("/myDetails")
+//    @PreAuthorize("hasRole('ROLE_ADMIN') or hasRole('ROLE_CSR') or hasRole('ROLE_CSR')")
+//    public Optional<User> getMyDetails(Re) {
+//
+//    }
 
     @GetMapping
     @PreAuthorize("hasRole('ROLE_ADMIN') or hasRole('ROLE_CSR')")
@@ -50,10 +63,26 @@ public class UserController {
                 loginDto.getLastName(), loginDto.getMiddleName(), loginDto.getPhoneNo());
     }
 
-    @DeleteMapping("/{id}")
+    @DeleteMapping("/{id}/delete")
     @PreAuthorize("hasRole('ROLE_ADMIN')")
     @ResponseStatus(HttpStatus.OK)
     public void deleteUser(@PathVariable("id") long id){
         userService.deleteUser(id);
+    }
+
+    @PutMapping("/{id}/update")
+    @PreAuthorize("hasRole('ROLE_ADMIN') or hasRole('ROLE_CSR') or hasRole('ROLE_USER')")
+    @ResponseStatus(HttpStatus.CREATED)
+    public void updateProfile(@PathVariable("id") long id, @RequestBody UserDto userDto) {
+
+        userService.updateProfile(id,userDto.getUsername(), userDto.getFirstName(), userDto.getLastName(),
+                userDto.getMiddleName(), userDto.getPhoneNo());
+    }
+
+    @PatchMapping("/{id}/activate")
+    @PreAuthorize("hasRole('ROLE_ADMIN')")
+    @ResponseStatus(HttpStatus.OK)
+    public void activateUser(@PathVariable("id") long id) {
+        userService.updateActivationStatus(id, STATUS_ACTIVE);
     }
 }

@@ -37,6 +37,9 @@ public class User {
     @Column(name = "last_name")
     private String lastName;
 
+    @Column(name = "activation_status")
+    private String activationStatus;
+
     @Column(name = "phone_no")
     @Pattern(regexp="^\\(?(\\d{3})\\)?[- ]?(\\d{3})[- ]?(\\d{4})$",
             message="{invalid.phonenumber}")
@@ -77,6 +80,18 @@ public class User {
         this.customerServiceRepresentative = customerServiceRepresentative;
     }
 
+    public User(String email, String password, String firstName, String middleName, String lastName, String phoneNo, List<Role> roles) {
+        this.email = email;
+        this.password = password;
+        this.firstName = firstName;
+        this.middleName = middleName;
+        this.lastName = lastName;
+        this.phoneNo = phoneNo;
+        this.roles = roles;
+        this.tickets = tickets;
+        this.customerServiceRepresentative = customerServiceRepresentative;
+    }
+
     public User (String email, String password, String firstName,String middleName, String lastName, String phoneNo, Role role) {
         this.email = email;
         this.password = password;
@@ -85,6 +100,25 @@ public class User {
         this.lastName = lastName;
         this.phoneNo = phoneNo;
         this.roles = Arrays.asList(role);
+    }
+
+    public User (String email, String password, String firstName,String middleName, String lastName, String phoneNo, Role role, String activationStatus) {
+        this.email = email;
+        this.password = password;
+        this.firstName = firstName;
+        this.middleName = middleName;
+        this.lastName = lastName;
+        this.phoneNo = phoneNo;
+        this.roles = Arrays.asList(role);
+        this.activationStatus = activationStatus;
+    }
+
+    public String getActivationStatus() {
+        return activationStatus;
+    }
+
+    public void setActivationStatus(String activationStatus) {
+        this.activationStatus = activationStatus;
     }
 
     public List<Ticket> getTickets() {
