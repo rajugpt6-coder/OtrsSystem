@@ -37,8 +37,8 @@ public class TicketController {
     @PreAuthorize("hasRole('ROLE_ADMIN') or hasRole('ROLE_CSR') or hasRole('ROLE_USER')")
     @ResponseStatus(HttpStatus.CREATED)
     public Optional<Ticket> raiseTicket(@RequestBody @Valid TicketDto ticketDto, @PathVariable("id") Long id){
-        ticketDto.setStatus(INITIAL_STATUS);
-        return Optional.ofNullable(ticketService.createTicket(ticketDto.getCategory(), ticketDto.getDescription(), ticketDto.getStatus(), ticketDto.getTitle(), ticketDto.getUserId()));
+
+        return Optional.ofNullable(ticketService.createTicket(ticketDto.getCategory(), ticketDto.getDescription(), INITIAL_STATUS, ticketDto.getTitle(), id));
 
     }
 
@@ -68,18 +68,40 @@ public class TicketController {
         ticketService.resolveIssue(id, ticketDto.getUserId());
     }
 
-    @PatchMapping("/tickets/{ticketId}")
-    @PreAuthorize("hasRole('ROLE_CSR')")
-    @ResponseStatus(HttpStatus.CREATED)
-    public void updateStatus(@PathVariable("ticketId") long id, @RequestBody @Validated TicketDto ticketDto){
-        ticketService.updateStatus(ticketDto.getStatus(), id);
-
-    }
+//    @PatchMapping("/tickets/{ticketId}")
+//    @PreAuthorize("hasRole('ROLE_CSR')")
+//    @ResponseStatus(HttpStatus.CREATED)
+//    public void updateStatus(@PathVariable("ticketId") long id, @RequestBody @Validated TicketDto ticketDto){
+//        ticketService.updateStatus(, id);
+//
+//    }
 
     @GetMapping("/tickets/all")
     @PreAuthorize("hasRole('ROLE_ADMIN')")
     public List<Ticket> getAllTickets() {
         return ticketService.getAllTickets();
     }
+
+    // Analytics code below
+
+    @GetMapping("/ticktes/count")
+    @PreAuthorize("hasRole('ROLE_ADMIN')")
+    public long getIsuueCount() {
+        return ticketService.countAllTickets();
+    }
+
+    @GetMapping("/tickets/{category}/count")
+    @PreAuthorize("hasRole('ROLE_ADMIN')")
+    public long getIssueByCategory(@PathVariable("category") String category ) {
+        return ticketService.countTicketByCategory(category);
+    }
+
+    @GetMapping("/tickets/{category}/{status}")
+    @PreAuthorize("hasRole('ROLE_ADMIN')")
+    public long getIssueBycategoryAndStatus (@PathVariable("category") String category, @PathVariable("status") String status ) {
+        return ticketService.countTicketByCategoryAndStatus(category, status);
+    }
+
+
 
 }

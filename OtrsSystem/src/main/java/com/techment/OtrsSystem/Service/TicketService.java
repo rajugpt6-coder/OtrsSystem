@@ -33,7 +33,7 @@ public class TicketService {
     public Ticket createTicket(String category, String description, String status, String title, Long id){
         LOGGER.info("New user attempting raise ticket");
         Ticket ticket = null;
-        if(userRepository.existsById(id)) {
+        if(userRepository.existsById(id) && userRepository.findById(id).get().getActivationStatus().equalsIgnoreCase("active")) {
             ticket = ticketRepository.save(new Ticket(category, title, description, Timestamp.valueOf(LocalDateTime.now()), Timestamp.valueOf(LocalDateTime.now().plusDays(MAX_DAYS)), status, userRepository.getOne(id)));
         }
         return ticket;
@@ -42,7 +42,7 @@ public class TicketService {
 
     public List<Ticket> findTicketsByUserId (Long id) {
         List<Ticket> ticket = null;
-        if(userRepository.existsById(id)) {
+        if(userRepository.existsById(id) && userRepository.findById(id).get().getActivationStatus().equalsIgnoreCase("active")) {
             return ticketRepository.findByUser(userRepository.getOne(id));
         }
         return ticket;
@@ -73,4 +73,19 @@ public class TicketService {
     public List<Ticket> getAllTickets(){
         return ticketRepository.findAll();
     }
+
+    //Analytics part
+
+    public long countAllTickets () {
+        return userRepository.count();
+    }
+
+    public long countTicketByCategory (String category) {
+        return ticketRepository.countTicketByCategory(category);
+    }
+
+    public long countTicketByCategoryAndStatus (String category, String status){
+        return ticketRepository.countTicketByCategoryAndStatus(category, status);
+    }
+
 }
