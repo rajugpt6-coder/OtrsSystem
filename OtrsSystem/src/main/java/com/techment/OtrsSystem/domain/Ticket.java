@@ -115,5 +115,11 @@ public class Ticket {
         this.dueDate = dueDate;
     }
 
+    public CustomerServiceRepresentative getCustomerServiceRepresentative() {
+        return customerServiceRepresentative;
+    }
 
+    public void setCustomerServiceRepresentative(CustomerServiceRepresentative customerServiceRepresentative) {
+        this.customerServiceRepresentative = customerServiceRepresentative;
+    }
 }

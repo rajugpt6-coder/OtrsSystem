@@ -2,14 +2,17 @@ package com.techment.OtrsSystem.Service;
 
 import com.techment.OtrsSystem.Repository.TicketRepository;
 import com.techment.OtrsSystem.Repository.UserRepository;
+import com.techment.OtrsSystem.domain.CustomerServiceRepresentative;
 import com.techment.OtrsSystem.domain.Ticket;
 import com.techment.OtrsSystem.domain.User;
 import jdk.nashorn.internal.runtime.options.Option;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.stereotype.Service;
 
+import javax.xml.ws.http.HTTPException;
 import java.sql.Timestamp;
 import java.time.LocalDateTime;
 import java.util.List;
@@ -44,5 +47,30 @@ public class TicketService {
         }
         return ticket;
 
+    }
+
+
+
+    public Ticket findTicketById(long ticketId){
+            return ticketRepository.getOne(ticketId);
+    }
+
+    public List<Ticket> getTicketsByCategory(String category, String status) {
+        return ticketRepository.findByCategoryAndStatus(category, status);
+    }
+
+    public void resolveIssue(long id, long csrId) {
+        CustomerServiceRepresentative customerServiceRepresentative = userRepository.findCustomerServiceRepresentativeById(csrId);
+        Ticket ticket = ticketRepository.getOne(id);
+        ticket.setCustomerServiceRepresentative(customerServiceRepresentative);
+        ticketRepository.save(ticket);
+    }
+
+    public void updateStatus(String status, long id) {
+        ticketRepository.updateTicketStatus(status, id);
+    }
+
+    public List<Ticket> getAllTickets(){
+        return ticketRepository.findAll();
     }
 }

@@ -1,5 +1,7 @@
 package com.techment.OtrsSystem.Controller;
 
+import com.techment.OtrsSystem.domain.CustomerServiceRepresentative;
+
 public class TicketDto {
     private String title;
 
@@ -10,6 +12,8 @@ public class TicketDto {
     private String category;
 
     private long userId;
+
+    private CustomerServiceRepresentative customerServiceRepresentative;
 
     public long getUserId() {
         return userId;
@@ -64,5 +68,13 @@ public class TicketDto {
 
     public void setCategory(String category) {
         this.category = category;
+    }
+
+    public CustomerServiceRepresentative getCustomerServiceRepresentative() {
+        return customerServiceRepresentative;
+    }
+
+    public void setCustomerServiceRepresentative(CustomerServiceRepresentative customerServiceRepresentative) {
+        this.customerServiceRepresentative = customerServiceRepresentative;
     }
 }
