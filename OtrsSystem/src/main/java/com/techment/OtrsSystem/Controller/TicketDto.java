@@ -3,11 +3,13 @@ package com.techment.OtrsSystem.Controller;
 import com.techment.OtrsSystem.domain.CustomerServiceRepresentative;
 
 public class TicketDto {
+    private long id;
+
     private String title;
 
     private String description;
 
-    private String status;
+//    private String status;
 
     private String category;
 
@@ -54,13 +56,13 @@ public class TicketDto {
         this.description = description;
     }
 
-    public String getStatus() {
-        return status;
-    }
-
-    public void setStatus(String status) {
-        this.status = status;
-    }
+//    public String getStatus() {
+//        return status;
+//    }
+//
+//    public void setStatus(String status) {
+//        this.status = status;
+//    }
 
     public String getCategory() {
         return category;

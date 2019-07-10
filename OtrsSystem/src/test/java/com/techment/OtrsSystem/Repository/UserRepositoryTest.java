@@ -26,9 +26,9 @@ public class UserRepositoryTest {
     @Autowired
     private UserRepository userRepository;
 
-//    @Test
-//    public void testUserSave() {
-//
-//        Assert.assertEquals("rajugpt6@gmail.com", userRepository.findByEmail("rajugpt6@gmail.com").getEmail());
-//    }
+    @Test
+    public void testUserSave() {
+
+        Assert.assertEquals("rajugpt6@gmail.com", userRepository.findByEmail("rajugpt6@gmail.com").get().getEmail());
+    }
 }
